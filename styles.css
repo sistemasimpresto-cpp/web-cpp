@@ -452,4 +452,98 @@ nav.scrolled .nav-cta:hover {
     section { padding:60px 1.2rem; }
     .hero { padding:88px 1.2rem 50px; }
   }
+
+ /* EL FORMULARIO  */
+     
+    .oculto {
+  display: none;
+}
+
+.visible {
+  display: block;
+  animation: fadeIn 0.5s ease-in-out;
+  margin: 0 auto; 
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+
+.interactive-form {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 30px;
+}
+
+.interactive-form .form-group {
+    position: relative;
+    margin-bottom: 35px;
+}
+
+.interactive-form input,
+.interactive-form textarea {
+    width: 100%;
+    padding: 15px 15px 15px 0;
+    border: none;
+    border-bottom: 2px solid #64748b;
+    background: transparent;
+    color: #032c55;
+    font-size: 16px;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.interactive-form input::placeholder,
+.interactive-form textarea::placeholder {
+    color: #94a3b8;
+}
+
+.interactive-form label {
+    position: absolute;
+    top: 15px;
+    left: 0;
+    color: #090909;
+    font-size: 16px;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    pointer-events: none;
+}
+
+/* Floating label effect */
+.interactive-form input:focus + label,
+.interactive-form textarea:focus + label,
+.interactive-form input:not(:placeholder-shown) + label,
+.interactive-form textarea:not(:placeholder-shown) + label {
+    top: -8px;
+    font-size: 12px;
+    color: #ff0101;
+    font-weight: bold;
+}
+
+.interactive-form input:focus,
+.interactive-form textarea:focus {
+    outline: none;
+    border-bottom-color: #ff0101;
+    transform: scale(1.02);
+}
+
+.interactive-form button {
+    position: relative;
+    background: #ff0101;
+    color: white;
+    border: none;
+    padding: 15px 40px;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.interactive-form button:hover {
+    background: #ff0101;
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(6, 6, 6, 0.797);
+}
   
