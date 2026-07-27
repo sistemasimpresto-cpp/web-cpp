@@ -3,6 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta content='yes' name='mobile-web-app-capable'/>
+<meta content='width = device-width, initial-scale = 1' name='viewport'/>
 <title>Copiado y Ploteo Profesional | CPP de México</title>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Rajdhani:wght@500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
@@ -84,19 +86,19 @@
     </div>
     <div class="servicios-grid">
       <div class="srv-card rv d1">
-        <div class="srv-icon"  style="background: transparent !important; border: none;"><img src="img/copiadora.png" alt="Multifuncionales" class="srv-icon"  style="background: transparent !important; border: none;"></div>
+        <div class="srv-icon"  style="background: transparent !important; border: none;"><img src="img/copiadora.png" alt="Multifuncionales" class="srv-icon" style="background: transparent !important; border: none;"></div>
         <h3>Copiadoras Multifuncionales</h3>
         <p>Equipos re-manufacturados con alto estándar de calidad, técnicos calificados y certificados de fábrica. Garantía y soporte incluidos. La mejor inversión para un bajo presupuesto.</p>
         <a href="#equipos" class="srv-link">Ver equipos →</a>
       </div>
       <div class="srv-card rv d2">
-        <div class="srv-icon"  style="background: transparent !important; border: none;"><img src="img/refaccion.png" alt="Refacciones y Consumibles" class="srv-icon"  style="background: transparent !important; border: none;"></div>
+        <div class="srv-icon"  style="background: transparent !important; border: none;"><img src="img/refaccion.png" alt="Refacciones y Consumibles" class="srv-icon" style="background: transparent !important; border: none;"></div>
         <h3>Refacciones y Consumibles</h3>
         <p>Contamos con las refacciones y tóner para tu copiadora con la más alta calidad en el mercado. Tóner, reveladores, fusores, rodillos, gomas, bandas y mucho más.</p>
         <a href="#contacto" class="srv-link">Solicitar →</a>
       </div>
       <div class="srv-card rv d3">
-        <div class="srv-icon"  style="background: transparent !important; border: none;"><img src="img/mantenimiento.png" alt="Soporte Técnico" class="srv-icon"  style="background: transparent !important; border: none;"></div>
+        <div class="srv-icon"  style="background: transparent !important; border: none;"><img src="img/mantenimiento.png" alt="Soporte Técnico" class="srv-icon" style="background: transparent !important; border: none;"></div>
         <h3>Soporte Técnico</h3>
         <p>Respondemos con garantía a las necesidades técnicas de nuestros productos. Equipo de técnicos profesionales altamente cualificados con formación continua y certificaciones de fábrica.</p>
         <a href="#contacto" class="srv-link">Contactar →</a>
@@ -132,6 +134,8 @@
     </div>
   </div>
 </section>
+
+ 
 
 <!-- RENTA -->
 <section id="renta">
@@ -205,8 +209,6 @@
   </div>
 </section>
 
- <!-- formulario --> 
-
  <!-- FORMULARIO -->
 <section id="formulario">
   <div class="container"> 
@@ -215,36 +217,49 @@
       <div class="nos-nums rv">      
         <h2 class="s-titulo" style="display: block;"><em>¿Te interesa una renta? </em>Déjanos tus datos y nos contactamos contigo.</h2>      
       </div>
+   
+<!-- formulario -->        
     
       <div class="nos-texto rv d2">
         <div class="">     
            <h2 class="s-titulo" style="display: block;"><em>Formulario: </em></h2>      
         </div>
-       
-                <form class="interactive-form" method="post" name="cpp" id="form-control" accept-charset="utf-8">
+
+           <form class="interactive-form" id="form-control" action="https://script.google.com/macros/s/AKfycby61R19tByKcYtbXR9P8i2zcy5f6cdJWOABvQcTkW4QlRTO98lby9TgKy_hrt44NsNtWg/exec" name="cpp" method="POST" accept-charset="utf-8">
+                
                     <div class="form-group">
-                        <input type="text" id="interactive-name" data-type="input-textbox" placeholder=" ">
+                        <input type="text" id="nombre" name="Nombre" class="interactive-name" data-type="input-textbox" placeholder=" " required>
                         <label for="interactive-name">Nombre</label>
                     </div>
                     
                     <div class="form-group">
-                        <input type="email" id="interactive-email" data-type="input-textbox" placeholder=" ">
+                        <input type="email" id="email" name="Correo" class="interactive-email" data-type="input-textbox" placeholder=" " required>
                         <label for="interactive-email">Email</label>
+                    </div>
+
+                    <div class="form-group">
+                        <input type="phone" id="telefono" name="Telefono" class="interactive-phone" data-type="input-textbox" placeholder=" " required>
+                        <label for="interactive-phone">Telefono</label>
+                    </div>
+
+                    <div class="form-group">
+                        <input type="text" id="empresa" name="Empresa" class="interactive-empresa" data-type="input-textbox" placeholder=" " required>
+                        <label for="interactive-email" required>Empresa</label>
                     </div>
                     
                     <div class="form-group">
-                        <textarea id="interactive-message" rows="4" placeholder=" "></textarea>
-                        <label for="interactive-message">Mensaje</label>
+                        <textarea for="interactive-message"  rows="3" placeholder=" "required></textarea>
+                        <label id="mensaje" name="Mensaje" required>Mensaje o Comentarios: </label>
                     </div>
                     
-                    <button type="submit"  id="btn_guardar-registro">
-                        <span>Enviar Mensaje</span>
-                        <div class="button-ripple"></div>
+                    <button type="submit"  id="btnEnviar">
+                        <span>Enviar Mensaje</span>                        
                     </button>
+                    
                 </form>
             
 
-       <div id="msg-confirmacion" class="oculto">
+       <div id="mensajeConfirmacion" class="oculto">
         ✅ Tus datos se enviaron correctamente. En el transcurso del día nos comunicaremos contigo.
        </div>
       
@@ -252,7 +267,6 @@
     </div>
   </div>
 </section>
-
 
 <!-- CONTACTO -->
 <section id="contacto">
