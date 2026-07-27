@@ -1,4 +1,4 @@
- *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
   :root {
     --rojo: #c8102e;
@@ -204,7 +204,7 @@ nav.scrolled .nav-cta:hover {
   .s-titulo { font-family: 'Rajdhani', sans-serif; font-size: clamp(1.9rem,4vw,2.8rem); font-weight: 700; color: var(--gris-oscuro); line-height: 1.15; margin-bottom: 12px; }
   .s-titulo em { font-style: normal; color: var(--rojo); }
   .s-desc { font-size: 1rem; color: var(--gris-texto); line-height: 1.8; max-width: 580px; }
-  .s-head { margin-bottom: 3.5rem; }
+  .s-head { margin-bottom: 3.5rem;  }
   .center { text-align: center; }
   .center .s-desc { margin: 0 auto; }
 
@@ -453,7 +453,10 @@ nav.scrolled .nav-cta:hover {
     .hero { padding:88px 1.2rem 50px; }
   }
 
- /* EL FORMULARIO  */
+  
+
+
+    /* El formulario  */
      
     .oculto {
   display: none;
@@ -541,9 +544,13 @@ nav.scrolled .nav-cta:hover {
     transition: all 0.3s ease;
 }
 
+button:disabled { background-color: #a5d6a7; cursor: not-allowed; }
+
+.alerta { display: none; padding: 10px; margin-top: 15px; border-radius: 4px; text-align: center; }
+
+
 .interactive-form button:hover {
     background: #ff0101;
     transform: translateY(-2px);
     box-shadow: 0 10px 25px rgba(6, 6, 6, 0.797);
 }
-  
