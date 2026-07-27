@@ -546,9 +546,13 @@ nav.scrolled .nav-cta:hover {
 
 .button:disabled { background-color: #18a01ea6; cursor: not-allowed; }
 
- .alerta { display: none; padding: 10px; margin-top: 15px; border-radius: 4px; text-align: center; }
-  .exito { display: block; background-color: #d4edda; color: #155724; }.alerta { display: none; padding: 10px; margin-top: 15px; border-radius: 4px; text-align: center; }
-
+ /* Estilos de alertas y mensajes */
+        .alerta { display: none; padding: 10px; margin-top: 15px; border-radius: 4px; text-align: center; }
+        .exito { display: block; background-color: #d4edda; color: #155724; }
+        
+        /* Estilo para el nuevo mensaje secreto u oculto */
+        .texto-oculto { display: none; margin-top: 15px; padding: 10px; background-color: #e2e3e5; color: #383d41; border-radius: 4px; font-style: italic; text-align: center; }
+        .mostrar { display: block; }
 
 .interactive-form button:hover {
     background: #ff0101;
