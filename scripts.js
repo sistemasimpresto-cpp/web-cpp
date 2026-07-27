@@ -27,3 +27,14 @@
       if(show){ c.classList.remove('in'); setTimeout(()=>c.classList.add('in'), 60); }
     });
   }
+
+// Formulario
+ const scriptURL = 'https://script.google.com/macros/s/AKfycbz39CbCCQYWW1jigUIyxvWxUDBMK0Isup5kTbjIZ4ldwJf3s6pEfhW0x8f8ZErhleVv/exec'
+  const form = document.forms['cpp']
+
+  form.addEventListener('submit', e => {
+    e.preventDefault()
+    fetch(scriptURL, { method: 'POST', body: new FormData(form) } )
+       .then(response => window.location.reload(false))
+       .catch (error => console.error ('Error!', error.message))
+})
