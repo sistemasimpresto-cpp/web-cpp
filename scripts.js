@@ -48,7 +48,7 @@
             
             // Deshabilitamos el botón para evitar que le den doble clic por error
             botonSubmit.disabled = true;
-            botonSubmit.innerText = "Enviando  los datos...";
+            botonSubmit.innerText = "Enviando  el formulario...";
 
             // Capturamos todos los inputs y textareas del formulario automáticamente
             const datosFormulario = new FormData(form);
@@ -61,7 +61,7 @@
             })
             .then(() => {
                 // Si la conexión fue exitosa, mostramos el aviso verde
-                mensajeAviso.innerText = "¡Formulario enviado con éxito a la hoja de cálculo!";
+                mensajeAviso.innerText = "¡ Formulario enviado con éxito !";
                 mensajeAviso.className = "alerta exito"; 
                 mensajeSecreto.classList.add('mostrar');
                 
