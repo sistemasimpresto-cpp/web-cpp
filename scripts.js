@@ -45,7 +45,7 @@
             
             // Deshabilitamos el botón para evitar que le den doble clic por error
             botonSubmit.disabled = true;
-            botonSubmit.innerText = "Guardando en Google Sheets...";
+            botonSubmit.innerText = "Enviando  los datos...";
 
             // Capturamos todos los inputs y textareas del formulario automáticamente
             const datosFormulario = new FormData(form);
