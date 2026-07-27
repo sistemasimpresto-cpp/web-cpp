@@ -544,11 +544,11 @@ nav.scrolled .nav-cta:hover {
     transition: all 0.3s ease;
 }
 
-.button:disabled { background-color: #18a01ea6; cursor: not-allowed; }
+.button:disabled { background-color: #32ee3bd6; cursor: not-allowed; }
 
  /* Estilos de alertas y mensajes */
         .alerta { display: none; padding: 10px; margin-top: 15px; border-radius: 4px; text-align: center; }
-        .exito { display: block; background-color: #d4edda; color: #155724; }
+        .exito { display: block; background-color: #d4edda; color: #32ee3bd6; }
         
         /* Estilo para el nuevo mensaje secreto u oculto */
         .texto-oculto { display: none; margin-top: 15px; padding: 10px; background-color: #e2e3e5; color: #ff7029; border-radius: 4px; font-style: italic; text-align: center; }
