@@ -457,16 +457,19 @@ nav.scrolled .nav-cta:hover {
 
 
     /* El formulario  */
-     
-    .oculto {
-  display: none;
-}
+ .seccion-contacto {
+            background-image: url('img/fondorojo.png'); /* Reemplaza con la ruta de tu imagen */
+            background-size: cover;         /* Hace que la imagen cubra toda la sección */
+            background-position: center;   /* Centra la imagen de fondo */
+            background-repeat: no-repeat;  /* Evita que la imagen se duplique */
+            min-height: 100vh;             /* Ocupa el 100% de la altura de la pantalla */
+            display: flex;                 /* Centra el formulario vertical y horizontalmente */
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            box-sizing: border-box;
+        }    
 
-.visible {
-  display: block;
-  animation: fadeIn 0.5s ease-in-out;
-  margin: 0 auto; 
-}
 
 @keyframes fadeIn {
   from { opacity: 0; transform: translateY(-10px); }
