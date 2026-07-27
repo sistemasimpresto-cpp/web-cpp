@@ -28,13 +28,50 @@
     });
   }
 
-// Formulario
- const scriptURL = 'https://script.google.com/macros/s/AKfycbz39CbCCQYWW1jigUIyxvWxUDBMK0Isup5kTbjIZ4ldwJf3s6pEfhW0x8f8ZErhleVv/exec'
-  const form = document.forms['cpp']
 
-  form.addEventListener('submit', e => {
-    e.preventDefault()
-    fetch(scriptURL, { method: 'POST', body: new FormData(form) } )
-       .then(response => window.location.reload(false))
-       .catch (error => console.error ('Error!', error.message))
-})
+//FORMULARIO
+  
+
+// 1. Detectamos los elementos del HTML por su ID
+        const form = document.getElementById('formularioGoogle');
+        const botonSubmit = document.getElementById('btnEnviar');
+        const mensajeAviso = document.getElementById('mensajeConfirmacion');
+
+        // 2. Escuchamos el momento en el que el usuario hace clic en "Enviar"
+        form.addEventListener('submit', function(evento) {
+            
+            // Evitamos que la página se recargue automáticamente
+            evento.preventDefault(); 
+            
+            // Deshabilitamos el botón para evitar que le den doble clic por error
+            botonSubmit.disabled = true;
+            botonSubmit.innerText = "Guardando en Google Sheets...";
+
+            // Capturamos todos los inputs y textareas del formulario automáticamente
+            const datosFormulario = new FormData(form);
+
+            // 3. Enviamos los datos usando la Fetch API (en segundo plano)
+            fetch(form.action, {
+                method: 'POST',
+                body: datosFormulario,
+                mode: 'no-cors' // Crucial para saltarse las restricciones de seguridad de Google
+            })
+            .then(() => {
+                // Si la conexión fue exitosa, mostramos el aviso verde
+                mensajeAviso.innerText = "¡Formulario enviado con éxito a la hoja de cálculo!";
+                mensajeAviso.className = "alerta exito"; 
+                
+                // Limpiamos los campos del formulario
+                form.reset(); 
+            })
+            .catch(error => {
+                // Si ocurre un error de conexión a internet o la URL está caída
+                console.error('Hubo un error:', error);
+                alert('No se pudo enviar el formulario. Inténtalo más tarde.');
+            })
+            .finally(() => {
+                // Volvemos a activar el botón pase lo que pase
+                botonSubmit.disabled = false;
+                botonSubmit.innerText = "Enviar Formulario";
+            });
+        });
