@@ -37,6 +37,9 @@
         const botonSubmit = document.getElementById('btnEnviar');
         const mensajeAviso = document.getElementById('mensajeConfirmacion');
 
+       // Seleccionamos el nuevo elemento oculto
+        const mensajeSecreto = document.getElementById('mensajeOculto');
+
         // 2. Escuchamos el momento en el que el usuario hace clic en "Enviar"
         form.addEventListener('submit', function(evento) {
             
@@ -60,6 +63,7 @@
                 // Si la conexión fue exitosa, mostramos el aviso verde
                 mensajeAviso.innerText = "¡Formulario enviado con éxito a la hoja de cálculo!";
                 mensajeAviso.className = "alerta exito"; 
+                mensajeSecreto.classList.add('mostrar');
                 
                 // Limpiamos los campos del formulario
                 form.reset(); 
