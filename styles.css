@@ -544,7 +544,7 @@ nav.scrolled .nav-cta:hover {
     transition: all 0.3s ease;
 }
 
-.button:disabled { background-color: #72111156; cursor: not-allowed; }
+.button:disabled { background-color: #18a01ea6; cursor: not-allowed; }
 
  .alerta { display: none; padding: 10px; margin-top: 15px; border-radius: 4px; text-align: center; }
   .exito { display: block; background-color: #d4edda; color: #155724; }.alerta { display: none; padding: 10px; margin-top: 15px; border-radius: 4px; text-align: center; }
