@@ -219,7 +219,7 @@ nav.scrolled .nav-cta:hover {
     background-repeat: no-repeat;
     
     /* CONTROL DE TRANSPARENCIA */
-    opacity: 0.4;                  /* Cambia este valor entre 0.1 (muy transparente) y 0.9 (casi opaco) */
+    opacity: 0.2;                  /* Cambia este valor entre 0.1 (muy transparente) y 0.9 (casi opaco) */
     
     z-index: 1;                    /* Coloca el fondo detrás de todo */
 }
