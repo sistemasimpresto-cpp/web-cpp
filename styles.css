@@ -192,7 +192,8 @@ nav.scrolled .nav-cta:hover {
 
   /* ── SECCIONES ── */
   section { padding: 90px 2.5rem; }
-    /* NUEVA SECCIÓN CON IMAGEN DE FONDO Y TRANSPARENCIA */
+
+  /* NUEVA SECCIÓN CON IMAGEN DE FONDO Y TRANSPARENCIA */
 .seccion-contacto {
     position: relative;            /* Necesario para posicionar la capa transparente */
     min-height: auto;              /* Se adapta estrictamente al tamaño de su contenido */
@@ -228,7 +229,6 @@ nav.scrolled .nav-cta:hover {
     position: relative;            /* Obligatorio para activar el z-index */
     z-index: 2;                    /* CAPA SUPERIOR: Por encima del z-index: 1 de la imagen */
 }
-
 
 
 
